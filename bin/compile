@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 echo "-----PB buildpack"
 
-apt-get install libboost-dev 
-apt-get install libboost-system-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-regex-dev 
-apt-get install cmake 
-apt-get install build-essential  
+sudo apt-get install libboost-dev 
+sudo apt-get install libboost-system-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-regex-dev 
+sudo apt-get install cmake 
+sudo apt-get install build-essential  
 
-apt-get update 
-apt-get install gcc-4.9 g++-4.9 cpp-4.9 
+sudo apt-get update 
+sudo apt-get install gcc-4.9 g++-4.9 cpp-4.9 
 gcc --version 
 
 cd /usr/bin 
-rm gcc g++ cpp 
-ln -s gcc-4.9 gcc 
-ln -s g++-4.9 g++ 
-ln -s cpp-4.9 cpp  
+sudo rm gcc g++ cpp 
+sudo ln -s gcc-4.9 gcc 
+sudo ln -s g++-4.9 g++ 
+sudo ln -s cpp-4.9 cpp  
 
 cd $1
 cwd
